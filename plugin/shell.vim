@@ -58,7 +58,7 @@ augroup END
 
 " Regular commands. {{{1
 
-command! -bar -nargs=? -complete=file Open call xolox#shell#open_cmd(<q-args>)
+command! -bar -nargs=? -complete=file ShellOpen call xolox#shell#open_cmd(<q-args>)
 command! -bar Maximize call xolox#shell#maximize()
 command! -bar Fullscreen call xolox#shell#fullscreen()
 command! -bar -bang -nargs=? MakeWithShell :call xolox#shell#make('c', <q-bang>, <q-args>)
@@ -68,7 +68,7 @@ command! -bar -bang -nargs=? LMakeWithShell :call xolox#shell#make('l', <q-bang>
 
 if g:shell_mappings_enabled
   inoremap <F6> <C-o>:Open<CR>
-  nnoremap <F6> :Open<CR>
+  nnoremap <F6> :ShellOpen<CR>
   inoremap <F11> <C-o>:Fullscreen<CR>
   nnoremap <F11> :Fullscreen<CR>
   inoremap <C-F11> <C-o>:Maximize<CR>
